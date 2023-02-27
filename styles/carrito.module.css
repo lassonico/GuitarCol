@@ -1,0 +1,121 @@
+.contenido{
+    display: grid;
+    align-items: flex-start;
+    gap: 3rem;
+}
+@media (min-width: 768px){
+    .contenido{
+        grid-template-columns: 3fr 2fr;
+    }
+}
+.carrito{
+    padding: 2rem 0;
+}
+.producto{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem 0;
+    border-bottom: 1.3px solid #cfcfcf;
+    position: relative;
+}
+.producto:last-of-type{
+    border: none;
+}
+.producto p{
+    margin: 0 0 1rem 0;
+}
+.producto span{
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+.nombre{
+    font-weight: 700;
+    font-size: 4rem;
+}
+.eliminar{
+    all: unset;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: red;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.eliminar:hover{
+    cursor: pointer;
+}
+.enlace{
+    all: unset;
+    padding: .8rem 4rem;
+    border: none;
+    background-color: var(--black);
+    color: white;
+    border-radius: 6px;
+    transform-origin: background-color;
+    transition-duration: .3s;
+}
+.enlace:hover{
+    cursor: pointer;
+    background-color: var(--primary);
+}
+.producto .cantidad{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--primary);
+    width: 80%;
+    padding: .6rem;
+    border-radius: 5px;
+    justify-content: space-between;
+    box-shadow: 1px 1px 5px #a3a3a3;
+    margin: 1rem 0;
+}
+@media (min-width: 768px){
+    .producto .cantidad{
+        width: 40%;
+    }
+}
+.text{
+    all: unset;
+    display: block;
+    line-height: 0;
+    padding-top: 5px;
+    color: white;
+}
+.producto .select{
+    all: unset;
+    border: .6px solid white;
+    color: white;
+    padding: .1rem 2.5rem;
+    /* margin-bottom: 1.5rem; */
+    border-radius: .4rem;
+}
+.producto .select option{
+    color: black;
+}
+.precio{
+    margin-top: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+.subtotal{
+    font-size: 2rem;
+}
+.total{
+    font-size: 3rem;
+}
+.resumen{
+    background-color: #ececec;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 5px #adadad;
+    position: sticky;
+    top: 3rem;
+}
+.resumen .total span{
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 4rem;
+}
